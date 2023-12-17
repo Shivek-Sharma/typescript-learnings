@@ -32,7 +32,7 @@ newUser.email = "shivek@coder.com"
 // newUser._id = "7448" // can't change read-only property
 
 /* -------------------------------------------------- */
-// Using predefined type aliases
+// Extending a type via intersections (&)
 
 type cardNumber = {
   cardNumber: string
