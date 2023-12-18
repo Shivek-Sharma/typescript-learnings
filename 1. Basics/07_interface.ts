@@ -16,9 +16,11 @@ interface TrialUser {
 const newUser: TrialUser = {
   userId: 148, username: "ram", email: "ram@gmail.com", creditCardNumber: 85452,
   startTrial: () => {
+    //doing some processing
     return "trial started";
   },
   getDiscount: (name: "christmas-sale") => {
+    //doing some processing
     return 10;
   }
 }
@@ -33,6 +35,7 @@ const newCustomer: Customer = {
   userId: 452, username: "shivek", email: "shivek@gmail.com", creditCardNumber: 145287,
   subscribedPlan: "Agency",
   getDiscount: (name: "christmas-sale") => {
+    //doing some processing
     return 20;
   }
 }

@@ -1,7 +1,7 @@
 type User1 = {
   name: string;
   email: string;
-  isActive: boolean
+  isActive(): boolean
 }
 
 function createUser(user: User1): User1 {
@@ -9,7 +9,13 @@ function createUser(user: User1): User1 {
   return user;
 }
 
-const myUser = createUser({ name: "shivek", email: "shivek@mail.com", isActive: true });
+const myUser = createUser({
+  name: "shivek", email: "shivek@mail.com",
+  isActive() {
+    //doing some processing
+    return true;
+  }
+});
 
 /* -------------------------------------------------- */
 
@@ -17,7 +23,7 @@ type User2 = {
   readonly _id: string
   name: string
   email: string
-  isActive: boolean
+  isActive: () => boolean
   creditCardDetails?: number // ? -> optional
 }
 
@@ -25,7 +31,10 @@ const newUser: User2 = {
   _id: "4855",
   name: "shivek",
   email: "shivek@mail.com",
-  isActive: true
+  isActive: () => {
+    //doing some processing
+    return false;
+  }
 }
 
 newUser.email = "shivek@coder.com"
